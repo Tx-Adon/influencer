@@ -1,0 +1,115 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+section{
+   display: flex;
+}
+.width{
+    width: 50%;
+    padding-left: 10%;
+}
+.link-button{
+    text-decoration: none;
+    background-color: rgb(245, 94, 119);
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-image: linear-gradient(orange tomato);
+    color: white;
+}
+.width img{
+    width: 70%;
+}
+
+/*------------- 
+  product style
+  -------------  */
+  .products{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr)
+    } 
+    .products{
+        grid-column-gap: 24px;
+        margin-left: 50px;
+        margin-top: 30px;
+        margin-right: 10px;
+    }
+  .product .product-banner img{
+      height: 104px;
+      width: 224px;
+  }
+  .product-info{
+      display: flex;
+      color: #ffc014;
+      font-size: 12px;
+      align-items: center;
+  }
+  .rating{
+      color: black;
+  }
+  a{
+      text-decoration: none;
+      color: crimson;
+  }
+  .Third{
+      justify-content: center;
+  }
+  footer{
+      background-color: lightslategrey;
+      text-align: center;
+      color: white;
+      width: 100%;
+      margin-top: 10px;
+  }
+  /*---------
+   media query
+   ----------- */
+   /* mobile devices */
+   @media only screen and (max-width: 688px) {
+       .first-part{
+           grid-template-columns: repeat(1, 1fr);
+           display: list-item;
+       }
+       .container{
+           flex-direction: column;
+           width: 100%;
+           display: list-item;
+           grid-template-columns: repeat(1, 1fr);
+       }
+       .products{
+        grid-template-columns: repeat(1, 1fr);
+       }
+       .product{
+           flex-direction: column;
+       }
+       .Third{
+           width: 100%;
+           flex-direction: column;
+           grid-template-columns: repeat(1, 1fr);
+       }
+   }
+   /* tablet devices  */
+   @media only screen and (min-width: 688px) and (max-width: 992px) {
+       .first-part{
+           width: 100%;
+       }
+       .container{
+        flex-direction: column;
+        width: 100%;
+        display: list-item;
+        grid-template-columns: repeat(2, 1fr);
+       }
+       .Third{
+           width: 100%;
+           flex-direction: column;
+           grid-template-columns: repeat(2, 1fr);
+       }
+       .products{
+           grid-template-columns: repeat(2, 1fr);
+           flex-direction: column;
+       }
+       .product{
+           flex-direction: column;
+       }
+       
+   }
